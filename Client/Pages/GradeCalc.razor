@@ -27,7 +27,7 @@ Assignment expected points: <br /> <input @bind="actual"/> <br />
 Desired grade: <br /><input @bind="DesiredGrade"/><br />
 <br />
 
-<button class="btn btn-primary" @onclick="CalculateMinPoints(__builder)">Calculate minimum points</button>
+<button class="btn btn-primary" @onclick="() => CalculateMinPoints(__builder)">Calculate minimum points</button>
 
 <div class="results">
     <p>Minimum points needed: @minScoreStr out of @max.ToString() points <br />
