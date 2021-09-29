@@ -14,7 +14,7 @@ Assignment type total current max points (before assignment): <br /> <input @bin
 Assignment type total current actual points: <br /> <input @bind="TotalActual"/> <br />
 Assignment max points: <br /> <input @bind="max"/> <br />
 Assignment expected points: <br /> <input @bind="actual"/> <br />
-
+<br />
 
 <button class="btn btn-primary" @onclick="DoProcessing">Calculate expected grade</button>
 
@@ -24,6 +24,7 @@ Assignment expected points: <br /> <input @bind="actual"/> <br />
 <p>Alternatively, enter the desired grade below to find out how many points you need on the assignment!</p>
 
 Desired grade: <br /><input @bind="DesiredGrade"/><br />
+<br />
 
 <button class="btn btn-primary" @onclick="CalculateMinPoints">Calculate minimum points</button>
 
