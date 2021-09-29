@@ -1,5 +1,4 @@
 @page "/gradecalc"
-@using Microsoft.AspNetCore.Components.Rendering
 
 <h1>Grade calculators!</h1>
 
@@ -27,12 +26,11 @@ Assignment expected points: <br /> <input @bind="actual"/> <br />
 Desired grade: <br /><input @bind="DesiredGrade"/><br />
 <br />
 
-<button class="btn btn-primary" @onclick="() => CalculateMinPoints(__builder)">Calculate minimum points</button>
+<button class="btn btn-primary" @onclick="CalculateMinPoints">Calculate minimum points</button>
 
-<div class="results">
-    <p>Minimum points needed: @minScoreStr out of @max.ToString() points <br />
-        Canvas won't do this for you! (I think)</p>
-    </div>
+<p>Minimum points needed: @minScoreStr out of @max.ToString() points <br />
+    Canvas won't do this for you! (I think)</p>
+
 
 @code
 {
@@ -62,16 +60,11 @@ Desired grade: <br /><input @bind="DesiredGrade"/><br />
         ExpectedGrade = gradeDbl.ToString();
     }
 
-    private void CalculateMinPoints(RenderTreeBuilder __builder)
+    private void CalculateMinPoints()
     {
         double minScoreDbl;
         minScoreDbl = -(-DesiredGrade * TotalMax * (TotalMax + max) + (CurrentGrade * TotalMax) * (TotalMax + max) - (max * TotalActual * AssignmentWeight)) / (TotalMax * AssignmentWeight);
 
         minScoreStr = minScoreDbl.ToString();
-
-        
-        <var results = document.getElementByID('.results');
-        results.style.visibility = 'visible';/>
     }
-
 }
