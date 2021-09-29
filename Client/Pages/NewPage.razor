@@ -63,6 +63,6 @@ Desired grade: <br /><input @bind="DesiredGrade"/><br />
         double minScore;
         minScore = -(-DesiredGrade * TotalMax * (TotalMax + max) + (CurrentGrade * TotalMax) * (TotalMax + max) - (max * TotalActual * AssignmentWeight)) / (TotalMax * AssignmentWeight);
 
-        MinGrade = minGrade.ToString();
+        MinGrade = minScore.ToString();
     }
 }
