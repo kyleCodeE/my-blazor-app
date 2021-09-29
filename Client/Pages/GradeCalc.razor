@@ -28,9 +28,10 @@ Desired grade: <br /><input @bind="DesiredGrade"/><br />
 
 <button class="btn btn-primary" @onclick="CalculateMinPoints">Calculate minimum points</button>
 
-<p>Minimum points needed: @minScoreStr out of @max.ToString() points <br />
-    Canvas won't do this for you! (I think)</p>
-
+<div class="results">
+    <p>Minimum points needed: @minScoreStr out of @max.ToString() points <br />
+        Canvas won't do this for you! (I think)</p>
+    </div>
 
 @code
 {
@@ -66,5 +67,13 @@ Desired grade: <br /><input @bind="DesiredGrade"/><br />
         minScoreDbl = -(-DesiredGrade * TotalMax * (TotalMax + max) + (CurrentGrade * TotalMax) * (TotalMax + max) - (max * TotalActual * AssignmentWeight)) / (TotalMax * AssignmentWeight);
 
         minScoreStr = minScoreDbl.ToString();
+
+        const results = document.querySelector('.results');
+        results.style.display = 'block';
+    }
+
+    function displayResults() {
+      const results = document.querySelector('.results');
+      results.style.display = 'block';
     }
 }
