@@ -4,26 +4,39 @@
 
 <p>Input prompt</p>
 
-Current grade: <br/><input @bind="InputString"/> <br/>
-Assignment type weight: <br/> <input @bind="InputString"/> <br />
-Assignment type total current points: <br /> <input @bind="InputString"/> <br />
-Assignment points <br /> <input @bind="InputString"/> <br />
-Expected grade: <br /> <input @bind="InputString"/>
+Current grade: <br/><input @bind="CurrentGrade"/> <br/>
+Assignment type weight: <br/> <input @bind="AssignmentWeight"/> <br />
+Assignment type total current max points: <br /> <input @bind="TotalMax"/> <br />
+Assignment type total current actual points: <br /> <input @bind="TotalActual"/> <br />
+Assignment max points: <br /> <input @bind="max"/> <br />
+Assignment expected points: <br /> <input @bind="actual"/> <br />
 
 
-<button class="btn btn-primary" @onclick="DoProcessing">Do it</button>
+<button class="btn btn-primary" @onclick="DoProcessing">Calculate expected grade</button>
 
 <p>Output: @OutputString</p>
 
 @code
 {
-    private string InputString {get; set;}
+    private string CurrentGrade {get; set;}
+    private string AssignmentWeight {get; set;}
+    private string TotalMax {get; set;}
+    private string TotalActual {get; set;}
+    private string max {get; set;}
+    private string actual {get; set;}
+
     private string OutputString {get; set;}
     private void DoProcessing()
 
     {
-        double num = double.Parse(InputString);
-        num = num*2;
-        OutputString = num.ToString();
+        double CurrentGrade = double.Parse(CurrentGrade);
+        double AssignmentWeight = double.Parse(AssignmentWeight);
+        double TotalMax = double.Parse(TotalMax);
+        double TotalActual = double.Parse(TotalActual);
+        double max = double.Parse(max);
+        double actual = double.Parse(actual);
+
+        max = max*2;
+        OutputString = max.ToString();
     }
 }
