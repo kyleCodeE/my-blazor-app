@@ -20,6 +20,16 @@ Assignment expected points: <br /> <input @bind="actual"/> <br />
 
 <p>Output: @OutputString</p>
 
+<br />
+<p>Alternatively, enter the desired grade below to find out how many points you need on the assignment!</p>
+
+Desired grade: <br /><input @bind="DesiredGrade"/><br />
+
+<button class="btn btn-primary" @onclick="CalculateMinPoints">Calculate minimum points</button>
+
+<p>Minimum points needed: @MinGrade</p>
+
+
 @code
 {
     double CurrentGrade {get; set;}
@@ -28,8 +38,10 @@ Assignment expected points: <br /> <input @bind="actual"/> <br />
     double TotalActual {get; set;}
     double max {get; set;}
     double actual {get; set;}
+    double DesiredGrade {get; set;}
 
     private string OutputString {get; set;}
+    private string MinGrade {get; set;}
     private void DoProcessing()
 
     {
@@ -44,5 +56,13 @@ Assignment expected points: <br /> <input @bind="actual"/> <br />
         grade = CurrentGrade - ((TotalActual / TotalMax * AssignmentWeight) - (((TotalActual + actual) / (TotalMax + max)) * AssignmentWeight));
 
         OutputString = grade.ToString();
+    }
+
+    private void CalculateMinPoints()
+    {
+        double minScore;
+        minScore = -(-DesiredGrade * TotalMax * (TotalMax + max) + (CurrentGrade * TotalMax) * (TotalMax + max) - (max * TotalActual * AssignmentWeight)) / (TotalMax * AssignmentWeight);
+
+        MinGrade = minGrade.ToString();
     }
 }
