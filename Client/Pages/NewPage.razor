@@ -6,7 +6,7 @@
 
 Current grade: <br/><input @bind="CurrentGrade"/> <br/>
 Assignment type weight: <br/> <input @bind="AssignmentWeight"/> <br />
-Assignment type total current max points: <br /> <input @bind="TotalMax"/> <br />
+Assignment type total current max points (before assignment): <br /> <input @bind="TotalMax"/> <br />
 Assignment type total current actual points: <br /> <input @bind="TotalActual"/> <br />
 Assignment max points: <br /> <input @bind="max"/> <br />
 Assignment expected points: <br /> <input @bind="actual"/> <br />
@@ -36,7 +36,9 @@ Assignment expected points: <br /> <input @bind="actual"/> <br />
         double max = double.Parse(max);
         double actual = double.Parse(actual);
 
-        max = max*2;
-        OutputString = max.ToString();
+        double grade;
+        grade = CurrentGrade - (TotalActual / TotalMax * AssignmentWeight) - (((TotalActual + actual) / (TotalMax + max)) * AssignmentWeight)
+
+        OutputString = grade.ToString();
     }
 }
