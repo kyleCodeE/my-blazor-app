@@ -1,12 +1,14 @@
-@page "/newpage"
+@page "/ipo"
 
 <h1>IPO</h1>
 
-<p>Current count: @currentCount</p>
+<p>Input prompt</p>
 
 <input @bind="InputString"/>
 
-<button class="btn btn-primary" @onclick="DoProcessing">Crunch some numbers</button>
+<button class="btn btn-primary" @onclick="DoProcessing">Do it</button>
+
+<p>Output: @OutputString</p>
 
 @code
 {
