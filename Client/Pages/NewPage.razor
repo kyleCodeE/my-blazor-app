@@ -29,8 +29,7 @@ Assignment expected points: <br /> <input @bind="actual"/> <br />
     private void DoProcessing()
 
     {
-        OutputString = TotalMax;
-        /*double CurrentGrade = double.Parse(CurrentGrade);
+        double CurrentGrade = double.Parse(CurrentGrade);
         double AssignmentWeight = double.Parse(AssignmentWeight);
         double TotalMax = double.Parse(TotalMax);
         double TotalActual = double.Parse(TotalActual);
@@ -40,6 +39,6 @@ Assignment expected points: <br /> <input @bind="actual"/> <br />
         double grade;
         grade = CurrentGrade - ((TotalActual / TotalMax * AssignmentWeight) - (((TotalActual + actual) / (TotalMax + max)) * AssignmentWeight));
 
-        OutputString = grade.ToString();*/
+        OutputString = grade.ToString();
     }
 }
