@@ -5,7 +5,7 @@ html, body {
 }
 
 .results{
-    display: none;
+    visibility: hidden;
 }
 
 a, .btn-link {

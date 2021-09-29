@@ -69,11 +69,8 @@ Desired grade: <br /><input @bind="DesiredGrade"/><br />
         minScoreStr = minScoreDbl.ToString();
 
         const results = document.querySelector('.results');
-        results.style.display() = 'block';
+        if(results.style.visibility == 'hidden')
+            results.style.visibility = 'visible';
     }
 
-    function displayResults() {
-      const results = document.querySelector('.results');
-      results.style.display = 'block';
-    }
 }
