@@ -37,7 +37,7 @@ Assignment expected points: <br /> <input @bind="actual"/> <br />
         double actual = double.Parse(actual);
 
         double grade;
-        grade = CurrentGrade - ((TotalActual / TotalMax * AssignmentWeight) - (((TotalActual + actual) / (TotalMax + max)) * AssignmentWeight)));
+        grade = CurrentGrade - ((TotalActual / TotalMax * AssignmentWeight) - (((TotalActual + actual) / (TotalMax + max)) * AssignmentWeight));
 
         OutputString = grade.ToString();
     }
