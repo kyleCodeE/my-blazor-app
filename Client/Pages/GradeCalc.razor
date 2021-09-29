@@ -26,7 +26,7 @@ Assignment expected points: <br /> <input @bind="actual"/> <br />
 Desired grade: <br /><input @bind="DesiredGrade"/><br />
 <br />
 
-<button class="btn btn-primary" @onclick="CalculateMinPoints">Calculate minimum points</button>
+<button class="btn btn-primary" @onclick="CalculateMinPoints(__builder)">Calculate minimum points</button>
 
 <div class="results">
     <p>Minimum points needed: @minScoreStr out of @max.ToString() points <br />
@@ -61,7 +61,7 @@ Desired grade: <br /><input @bind="DesiredGrade"/><br />
         ExpectedGrade = gradeDbl.ToString();
     }
 
-    private void CalculateMinPoints()
+    private void CalculateMinPoints(RenderTreeBuilder __builder)
     {
         double minScoreDbl;
         minScoreDbl = -(-DesiredGrade * TotalMax * (TotalMax + max) + (CurrentGrade * TotalMax) * (TotalMax + max) - (max * TotalActual * AssignmentWeight)) / (TotalMax * AssignmentWeight);
