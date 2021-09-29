@@ -18,23 +18,23 @@ Assignment expected points: <br /> <input @bind="actual"/> <br />
 
 @code
 {
-    private string CurrentGrade {get; set;}
-    private string AssignmentWeight {get; set;}
-    private string TotalMax {get; set;}
-    private string TotalActual {get; set;}
-    private string max {get; set;}
-    private string actual {get; set;}
+    double CurrentGrade {get; set;}
+    double AssignmentWeight {get; set;}
+    double TotalMax {get; set;}
+    double TotalActual {get; set;}
+    double max {get; set;}
+    double actual {get; set;}
 
     private string OutputString {get; set;}
-    private void DoProcessing()
+    private void DoProcessing(double CurrentGrade = 100, double AssignmentWeight = 100, double TotalMax = 0, double TotalActual = 0, double max, double actual)
 
     {
-        double CurrentGrade = double.Parse(CurrentGrade);
+        /*double CurrentGrade = double.Parse(CurrentGrade);
         double AssignmentWeight = double.Parse(AssignmentWeight);
         double TotalMax = double.Parse(TotalMax);
         double TotalActual = double.Parse(TotalActual);
         double max = double.Parse(max);
-        double actual = double.Parse(actual);
+        double actual = double.Parse(actual);*/
 
         double grade;
         grade = CurrentGrade - ((TotalActual / TotalMax * AssignmentWeight) - (((TotalActual + actual) / (TotalMax + max)) * AssignmentWeight));
