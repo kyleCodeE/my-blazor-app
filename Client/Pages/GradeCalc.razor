@@ -28,8 +28,7 @@ Desired grade: <br /><input @bind="DesiredGrade"/><br />
 
 <button class="btn btn-primary" @onclick="CalculateMinPoints">Calculate minimum points</button>
 
-<p>Minimum points needed: @minScoreStr out of @max.ToString() points <br />
-    Canvas won't do this for you! (I think)</p>
+<p>@minScoreStr</p>
 
 
 @code
@@ -65,6 +64,6 @@ Desired grade: <br /><input @bind="DesiredGrade"/><br />
         double minScoreDbl;
         minScoreDbl = -(-DesiredGrade * TotalMax * (TotalMax + max) + (CurrentGrade * TotalMax) * (TotalMax + max) - (max * TotalActual * AssignmentWeight)) / (TotalMax * AssignmentWeight);
 
-        minScoreStr = minScoreDbl.ToString();
+        minScoreStr = "Minimum points needed: " + minScoreDbl.ToString() + " out of " + max.ToString() + " points";  
     }
 }
