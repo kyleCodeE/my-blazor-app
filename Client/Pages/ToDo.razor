@@ -1,19 +1,19 @@
-@page "/todo"                                               //
+@page "/todo"
 
-<h1>To Do: (@todos.Count(todo => !todo.IsDone))</h1>        //
+<h1>To Do: (@todos.Count(todo => !todo.IsDone))</h1>
 
-<ul>                                                        //
-    @foreach (var todo in todos)                            //
-    {                                                       //
-        <li>                                                //
-            <input type="checkbox" @bind="todo.IsDone"/>    //
-            <input @bind="todo.Title"/>                     //
-        </li>                                               //
-    }                                                       //
-</ul>                                                       //
+<ul>
+    @foreach (var todo in todos)
+    {
+        <li>
+            <input type="checkbox" @bind="todo.IsDone"/>
+            <input @bind="todo.Title"/>
+        </li>
+    }
+</ul>
 
-<input placeholder="Something to do" @bind="newToDo"/>      //
-<button @onclick="AddToDo">Add to do</button>               //
+<input placeholder="Something to do" @bind="newToDo"/>
+<button @onclick="AddToDo">Add to do</button>
 
 @code {                                                     //
     private List<ToDoItem> todos = new();                   //
@@ -27,4 +27,4 @@
             newToDo = string.Empty;                         //
         }                                                   //
     }                                                       //
-}                                                           //
+}
