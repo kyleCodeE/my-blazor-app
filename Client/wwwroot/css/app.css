@@ -140,6 +140,12 @@ app {
     top: 0.5rem;
 }
 
+#ytvid {
+    position: absolute;
+    z-index:auto;
+    cursor:move;
+}
+
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
         display: none;
