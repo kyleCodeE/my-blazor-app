@@ -1,9 +1,9 @@
-@page "/todo"
+@page "/todo"                                               // add page name for navmenu 
 
-<h1>To Do: (@todos.Count(todo => !todo.IsDone))</h1>
+<h1>To Do: (@todos.Count(todo => !todo.IsDone))</h1>        <!-- Header with count of total tasks left -->
 
-<ul style="list-style: none;">
-    @foreach (var todo in todos)                            <!--  -->
+<ul style="list-style: none;">                              <!-- start unordered list (each line is a to do) -->
+    @foreach (var todo in todos)                            // create a line for each to do
     {                                                       <!-- start foreach -->
         <li>                                                <!-- start list (single line) -->
             <input type="checkbox" @bind="todo.IsDone"/>    <!-- create checkbox -->

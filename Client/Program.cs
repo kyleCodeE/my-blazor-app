@@ -20,9 +20,9 @@ namespace BlazorApp.Client
         }
     }
 
-    public class ToDoItem                   //
-    {                                       //
-        public string Title {  get; set; }  //
-        public bool IsDone { get; set; }    //
-    }                                       //
+    public class ToDoItem                   // create class ToDoItem
+    {                                       // start ToDoItem
+        public string Title {  get; set; }  // set title from textbox
+        public bool IsDone { get; set; }    // set IsDone from checkbox
+    }                                       // end ToDoItem
 }
