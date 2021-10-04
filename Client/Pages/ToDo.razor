@@ -3,28 +3,28 @@
 <h1>To Do: (@todos.Count(todo => !todo.IsDone))</h1>
 
 <ul style="list-style: none;">
-    @foreach (var todo in todos)
-    {
-        <li>
-            <input type="checkbox" @bind="todo.IsDone"/>
-            <input @bind="todo.Title"/>
-        </li>
-    }
-</ul>
+    @foreach (var todo in todos)                            <!--  -->
+    {                                                       <!-- start foreach -->
+        <li>                                                <!-- start list (single line) -->
+            <input type="checkbox" @bind="todo.IsDone"/>    <!-- create checkbox -->
+            <input @bind="todo.Title"/>                     <!-- create text box filled with todo title -->
+        </li>                                               <!-- end list (single line) -->
+    }                                                       <!-- end foreach -->
+</ul>                                                       <!-- end unordered list -->
 
-<input placeholder="Something to do" @bind="newToDo"/>
-<button @onclick="AddToDo">Add to do</button>
+<input placeholder="Something to do" @bind="newToDo"/>      <!-- create input box -->
+<button @onclick="AddToDo">Add to do</button>               <!-- create button -->
 
-@code {                                                     //
-    private List<ToDoItem> todos = new();                   //
-    private string newToDo;                                 //
+@code {                                                     // start c# code
+    private List<ToDoItem> todos = new();                   // initialize list todos
+    private string newToDo;                                 // declare newToDo string
 
-    private void AddToDo()                                  //
-    {                                                       //
-        if (!string.IsNullOrWhiteSpace(newToDo))            //
-        {                                                   //
-            todos.Add(new ToDoItem { Title = newToDo});     //
-            newToDo = string.Empty;                         //
-        }                                                   //
-    }                                                       //
-}
+    private void AddToDo()                                  // declare AddToDo
+    {                                                       // start AddToDo
+        if (!string.IsNullOrWhiteSpace(newToDo))            // make sure text box has text in it
+        {                                                   // start if
+            todos.Add(new ToDoItem { Title = newToDo});     // add newToDo to list
+            newToDo = string.Empty;                         // clear newToDo (clear box)
+        }                                                   // end if
+    }                                                       // end AddToDo
+}                                                           <!-- end c# code -->
