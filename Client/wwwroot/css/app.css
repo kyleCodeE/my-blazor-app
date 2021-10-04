@@ -144,6 +144,8 @@ app {
     position: absolute;
     z-index:auto;
     cursor:move;
+    bottom: 10px;
+    left: 20px;
 }
 
 @media (max-width: 767.98px) {
