@@ -1,31 +1,30 @@
-Kyle Cote
-Tutorial done as an assignment for COP 3003
-Tutorial: https://devblogs.microsoft.com/aspnet/azure-static-web-apps-with-blazor/
+# Blazor Web Application
 
-# Blazor Starter Application
+This is a blazor web application based on [this tutorial](https://devblogs.microsoft.com/aspnet/azure-static-web-apps-with-blazor/). I built upon the base provided as an assignment for an FGCU programming class during my junior year, and modified parts of it for fun and experience. 
 
-This template contains an example [Blazor WebAssembly](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-3.1#blazor-webassembly) client application, a C# [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview) and a C# class library with shared code.
+## Demonstration
+Feel free to [check it out!](https://orange-bay-0e57dde10.azurestaticapps.net/)
+
+![The blazor app!](blazorApp.png)
+
+## Built With
+* Visual Studio 2019
+*   With ASP.NET and web development tools installed
+* Microsoft Azure
 
 ## Getting Started
+* Clone repository to your machine
+*   Ensure ASP.NET or equivalent is installed
+* From the Client directory in CMD, run "dotnet watch run"
 
-Create a repository from the [GitHub template](https://docs.github.com/en/enterprise/2.22/user/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) and then clone it locally to your machine.
+## Author
 
-Once you clone the project, open the solution in [Visual Studio Code](https://code.visualstudio.com/) or [Visual Studio](https://visualstudio.microsoft.com/vs/preview/vs2022/) and follow these steps:
+Kyle Cote
 
-- In the **API** folder, copy `local.settings.example.json` to `local.settings.json`
-- Press **F5** to launch both the client application and the Functions API app. In Visual Studio, you can right click the solution and select both API project and client project as startup projects. 
+## Acknowledgments
 
-_Note: If you're using the Azure Functions CLI tools, refer to [the documentation](https://docs.microsoft.com/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash) on how to enable CORS._
+* https://devblogs.microsoft.com/aspnet/azure-static-web-apps-with-blazor/
+* Professor Vanselow
 
-## Template Structure
-
-- **Client**: The Blazor WebAssembly sample application
-- **API**: A C# Azure Functions API, which the Blazor application will call
-- **Shared**: A C# class library with a shared data model between the Blazor and Functions application
-
-## Deploy to Azure Static Web Apps
-
-This application can be deployed to [Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps), to learn how, check out [our quickstart guide](https://aka.ms/blazor-swa/quickstart).
-
-## Running site
-![blazor page running](blazor.png)
+## History
+From the base template linked at top of readme, I have embedded the live music stream, added the grade calculators, added the todo list, and added the about me page.
