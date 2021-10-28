@@ -5,7 +5,7 @@ This is a blazor web application based on [this tutorial](https://devblogs.micro
 ## Demonstration
 Feel free to [check it out!](https://orange-bay-0e57dde10.azurestaticapps.net/)
 
-![The blazor app!](blazorApp.png)
+![The blazor app!](blazorApp.jpg)
 
 ## Built With
 * Visual Studio 2019
