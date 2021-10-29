@@ -1,7 +1,10 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    background-color: #e6eff2;
+    font-family: sans-serif;
+    position: center;
 }
 
 .results{
@@ -32,6 +35,7 @@ app {
 
 .main {
     flex: 1;
+    margin-top: 30px;
 }
 
     .main .top-row {
@@ -48,6 +52,19 @@ app {
 .main .top-row a:first-child {
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e6eff2;
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .sidebar {
@@ -83,7 +100,7 @@ app {
         }
 
         .sidebar .nav-item a {
-            color: #d7d7d7;
+            color: #003342;
             border-radius: 4px;
             height: 3rem;
             display: flex;
@@ -98,11 +115,60 @@ app {
 
             .sidebar .nav-item a:hover {
                 background-color: rgba(255,255,255,0.1);
-                color: white;
+                color: blue;
+            }
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #e6eff2;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+    /* Links inside the navbar */
+    .navbar .nav-item {
+        font-size: 0.9rem;
+        list-style-type: none;
+    }
+
+
+        .navbar .nav-item a {
+            color: #000000;
+            border-radius: 4px;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            line-height: 3rem;
+        }
+
+            .navbar .nav-item a.active {
+                background-color: rgba(255,255,255,0.5);
+                border-bottom-style: solid;
+                border-bottom-width: 5px;
+                border-bottom-color: #003342;
+                color: #003342;
+            }
+
+            .navbar .nav-item a:hover {
+                background-color: rgba(255,255,255,0.5);
+                color: #00a0d1;
             }
 
 .content {
     padding-top: 1.1rem;
+}
+
+h1.Copperplate {
+    font-family: 'Copperplate Gothic';
+    font-size: 100px;
+}
+
+li.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
 }
 
 .navbar-toggler {
@@ -193,3 +259,4 @@ app {
         display: block;
     }
 }
+

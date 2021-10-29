@@ -2,18 +2,21 @@
 
 <h1>To Do: (@todos.Count(todo => !todo.IsDone))</h1>        <!-- Header with count of total tasks left -->
 
-<ul style="list-style: none;">                              <!-- start unordered list (each line is a to do) -->
-    @foreach (var todo in todos)                            // create a line for each to do
-    {                                                       <!-- start foreach -->
-        <li>                                                <!-- start list (single line) -->
-            <input type="checkbox" @bind="todo.IsDone"/>    <!-- create checkbox -->
-            <input @bind="todo.Title"/>                     <!-- create text box filled with todo title -->
-        </li>                                               <!-- end list (single line) -->
-    }                                                       <!-- end foreach -->
-</ul>                                                       <!-- end unordered list -->
 
-<input placeholder="Something to do" @bind="newToDo"/>      <!-- create input box -->
-<button @onclick="AddToDo">Add to do</button>               <!-- create button -->
+<div class="text-center">
+    <ul style="list-style: none; padding-left:0px;">                              <!-- start unordered list (each line is a to do) -->
+        @foreach (var todo in todos)                            // create a line for each to do
+        {                                                       <!-- start foreach -->
+            <li>                                                <!-- start list (single line) -->
+                <input type="checkbox" @bind="todo.IsDone"/>    <!-- create checkbox -->
+                <input @bind="todo.Title"/>                     <!-- create text box filled with todo title -->
+            </li>                                               <!-- end list (single line) -->
+        }                                                       <!-- end foreach -->
+    </ul>                                                       <!-- end unordered list -->
+
+    <input placeholder="Something to do" @bind="newToDo"/>      <!-- create input box -->
+    <button @onclick="AddToDo">Add to do</button>               <!-- create button -->
+</div>
 
 @code {                                                     // start c# code
     private List<ToDoItem> todos = new();                   // initialize list todos
