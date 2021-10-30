@@ -5,8 +5,8 @@ This is a blazor web application based on [this tutorial](https://devblogs.micro
 ## Demonstration
 Feel free to [check it out!](https://orange-bay-0e57dde10.azurestaticapps.net/)
 
-![The blazor app!](fullScreen.jpg)
-![The blazor app!](mobileBlazor.gif)
+![The blazor app!](Client/wwwroot/Images/fullScreen.jpg)
+![The blazor app!](Client/wwwroot/Images/mobileBlazor.gif)
 
 
 ## Built With
