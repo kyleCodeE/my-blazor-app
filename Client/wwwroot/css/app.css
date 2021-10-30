@@ -113,7 +113,7 @@ app {
 .navbarSm {
     background-color: #e6eff2;
     position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
+    height: 90vw;
     width: 100%; /* Full width */
     justify-content: center !important;
     height: 10vh;
@@ -142,7 +142,7 @@ app {
                 border-bottom-style: solid;
                 border-bottom-width: 5px;
                 border-bottom-color: #003342;
-                color: #003342;
+                color: black;
                 font-weight: bold;
             }
 
@@ -205,6 +205,48 @@ li.no-bullets {
     left: 20px;
 }
 
+.container {
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: solid;
+    border-color: black;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+    padding-left: 15px;
+}
+
+.changeBurg {
+    padding-left: 15px;
+    border-bottom: solid;
+}
+
+.changeBurg .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+    border-bottom: solid;
+    border-color: black;
+}
+
+.changeBurg .bar2 {
+    opacity: 0;
+    margin: 6px 0;
+}
+
+.changeBurg .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    margin: 6px 0;
+}
+
+.fa .fa-github {
+}
+
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
         display: none;
@@ -229,8 +271,8 @@ li.no-bullets {
     }
 
     .navbarSm {
-        display: none;
-        height: 100%;
+        display: block;
+        height: 5%;
         width: 100%;
     }
     
@@ -287,8 +329,8 @@ li.no-bullets {
 
     /* Style the active link (or home/logo) */
     .active {
-        background-color: #04AA6D;
-        color: white;
+        background-color: #e6eff2;
+        color: black;
     } 
 }
 
