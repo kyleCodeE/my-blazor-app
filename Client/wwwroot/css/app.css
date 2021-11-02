@@ -1,7 +1,7 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
-    margin-top: 20px;
+    margin-top: 5px; 
     background-color: #e6eff2;
     font-family: sans-serif;
     position: center;
@@ -295,7 +295,7 @@ li.no-bullets {
     .topnav {
         overflow: hidden;
         background-color: #333;
-        position: relative;
+        position: relative; 
     }
 
         /* Hide the links inside the navigation menu (except for logo/home) */

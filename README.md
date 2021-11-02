@@ -5,7 +5,12 @@ This is a blazor web application based on [this tutorial](https://devblogs.micro
 ## Demonstration
 Feel free to [check it out!](https://orange-bay-0e57dde10.azurestaticapps.net/)
 
-![The blazor app!](blazorApp.jpg)
+<p align="center">
+  <img src="Client/wwwroot/Images/mobileBlazor.gif" />
+</p>
+
+![The blazor app!](Client/wwwroot/Images/fullScreen.jpg)
+
 
 ## Built With
 * Visual Studio 2019
