@@ -74,7 +74,7 @@ app {
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     justify-content: center !important;
-    height:10vh;
+    height:5vh;
     display: flex;
 }
  
